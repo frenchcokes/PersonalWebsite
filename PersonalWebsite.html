@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Mah's Website</title>
+    <style>
+        /* Style the colored rectangle */
+        .background-rectangle {
+            position: fixed;
+            top: 0;
+            left: 50%; /*Place it in the middle horizontally */
+            transform: translateX(-50%); /* Center it horizontally */
+            height: 100%; /* Make it span the full height of the page */
+            width: 70%; /* Make it span the partial width of the page */
+            background-color: #000000; /* Set the background color to your desired color */
+            z-index: -1; /* Place it behind other content */
+        }
+
+        /* Additional styles for the content */
+        body {
+            margin: 0; /* Remove default margin for the body */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            /* Add your content styles here */
+        }
+
+        .h2 {
+            font-size: 25;
+        }
+    </style>
+</head>
+<body>
+    <!-- The colored rectangle with the class "background-rectangle" -->
+    <div class="background-rectangle">
+        <div class="content">
+            <h1 style="text-align: center;">Sean Mah</h1>
+
+            <hr>
+            
+            <h2>About</h2>
+            <p>Hello! I'm Sean a computer engineering student at the University of Alberta.</p>
+            
+            <hr>
+
+            <h2>Projects</h2>
+            <p>Projects Description</p>
+            <ul>
+                <li>Ingenium (2023)
+                    <p>A game I made in Unity. My largest project to date. Check it out at: <a href="https://frenchcoke.itch.io/ingenium" style="color: white;" target="_blank">Itch.io</a></p>
+                </li>
+                <li>Discord Data Analyzer (2023)
+                    <p>A Windows application which reads Discord data files into graphs and extracts cool facts. Originally written in Python and was converted to an exe by PyInstaller. Try it at: <a href="https://drive.google.com/file/d/1TtQ8BEpp8IsQJOvBeqBvtqWI2bWZlDoV/view?usp=drive_link" style="color: white;" target="_blank">Google Drive</a></p>
+                </li>
+            </ul>
+
+            <hr>
+            
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:seankmah@gmail.com" style="color:white">seankmah@gmail.com</a></p>
+            <p>Linkedin: <a href="https://www.linkedin.com/in/sean-mah-1498b5264/" style="color: white" target="_blank">sean-mah-1498b5264</a></p>
+
+            <hr>
+
+            <footer>Website and Design by me: Sean Mah</footer>
+
+        </div>  
+    </div>
+</body>
+</html>
