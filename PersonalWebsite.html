@@ -97,6 +97,34 @@
             }
         }
 
+        .textContainer {
+            width: 780px;
+            display: table;
+        }
+
+        .mainSection {
+            float: left;
+            width: 20%;
+        }
+
+        .subSectionContainer {
+            float: right;
+            width: 80%;
+            display: table;
+        }
+
+        .subSectionName {
+            float: left;
+            width: 30%;
+        }
+
+        .subSectionContent {
+            float: left;
+            width: 70%;
+            font-size: 14px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -122,29 +150,69 @@
 
             <hr>
             
-            <h2 id="about">About</h2>
-            <p>Hello! I'm Sean a computer engineering student at the University of Alberta.</p>
+            <div class="textContainer">
+                <div class = "mainSection">
+                    <h2 id="about">About</h2>
+                </div>
+
+                <div class="subSectionContainer">
+                    <div class="subSectionName">
+                        <h2>Background</h2>
+                    </div>
+                    <div class="subSectionContent"><p>Hello! I'm Sean a computer engineering student at the University of Alberta. BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH </p></div>
+
+                </div>
+
+                <div class = "subSectionContainer">
+                    <div class = "subSectionName">
+                        <h2>Subsection</h2>
+                    </div>
+                    <div class = "subSectionContent"><p>BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH</p></div>
+                </div>
+            </div>
             
             <hr>
+            
+            <div class="textContainer">
+                <div class = "mainSection">
+                    <h2 id="projects">Projects</h2>
+                </div>
 
-            <h2 id="projects">Projects</h2>
-            <p>A quick overview of my most significant projects.</p>
-            <ul>
-                <li>Personal Website (2023)
-                    <p>Designed a personal website for myself. This website!</p>
-                </li>
+                <div class="subSectionContainer">
+                    <div class = "subSectionName">
+                        <h2>Ingenium</h2>
+                    </div>
+                    <div class = "subSectionContent">
+                        <p>A game I made in Unity! My largest project to date. Check it out at: <a href="https://frenchcoke.itch.io/ingenium" style="color: white;" target="_blank">Itch.io</a></p>
+                        
+                    </div>
+                </div>
 
-                <li>Discord Data Analyzer (2023)
-                    <p>A Windows application which reads Discord data files into graphs and extracts cool facts. Originally written in Python and was converted to an exe by PyInstaller. Try it at: <a href="https://drive.google.com/file/d/1TtQ8BEpp8IsQJOvBeqBvtqWI2bWZlDoV/view?usp=drive_link" style="color: white;" target="_blank">Google Drive</a></p>
+                <div class="subSectionContainer">
+                    <div class = "subSectionName">
+                        <h2>Discord Data Analyzer</h2>
+                    </div>
+                    <div class = "subSectionContent">
+                        <p>A Windows application which reads Discord data files into graphs and extracts cool facts. Originally written in Python and was converted to an exe by PyInstaller. Try it at: <a href="https://drive.google.com/file/d/1TtQ8BEpp8IsQJOvBeqBvtqWI2bWZlDoV/view?usp=drive_link" style="color: white;" target="_blank">Google Drive</a></p>
+                    </div>
+
                     <img src = "discordAnalyzerResults.png" alt="Sample discord analyzer results" style="max-width: 75%; height: auto;" class="center">
                     <figcaption style="text-align: center;">Example output (Some content blurred)</figcaption>
-                </li>
 
-                <li>Ingenium (2023)
-                    <p>A game I made in Unity! My largest project to date. Check it out at: <a href="https://frenchcoke.itch.io/ingenium" style="color: white;" target="_blank">Itch.io</a></p>
-                </li>
-            </ul>
+                </div>
 
+                <div class="subSectionContainer">
+                    <div class = "subSectionName">
+                        <h2>Personal Website</h2>
+                    </div>
+                    <div class = "subSectionContent">
+                        <p>Designed a personal website for myself. This website!</p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             <hr>
             
             <h2 id="contact">Contact</h2>
