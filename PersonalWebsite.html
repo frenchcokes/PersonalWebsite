@@ -66,7 +66,7 @@
             top: 50vh;
             transform: translate(0, -50%);
             background-color: black;
-            height: 100px;
+            height: 175px;
             width: 100px;
             position: fixed;
             z-index: 1;
@@ -132,12 +132,18 @@
             align-items: center;
         }
 
+        .subSectionContentSplit {
+            float: left; 
+            width: 50%
+        }
+        |
 
     </style>
 </head>
 <body style="background-color: white;">
     <aside class="sideBar">
         <button data-target="about">About</button>
+        <button data-target="skills">Skills</button>
         <button data-target="projects">Projects</button>
         <button data-target="contact">Contact</button>
     </aside>
@@ -148,6 +154,7 @@
 
             <div class ="button-container">
                 <button data-target="about">About</button>
+                <button data-target="skills">Skills</button>
                 <button data-target="projects">Projects</button>
                 <button data-target="contact">Contact</button>
             </div>
@@ -164,8 +171,7 @@
                 </div>
 
                 <div class="subSectionContainer">
-                    <p>Welcome to my website! I'm a second-year computer engineering student with a love for all things technology. I enjoy exploring different fields which is why my experiences and projects are diverse.</p>
-
+                    <p>Welcome to my website! I'm a second-year computer engineering student with a love for all things technology. I enjoy learning and experimenting in many different fields which should be reflected in my project variety. It is my goal to pursue a career in technology, so I hope this website can help showcase my passion.</p>
                 </div>
             </div>
             
@@ -177,12 +183,29 @@
                 </div>
 
                 <div class = "subSectionContainer">
+                    <p>My skill rating system is out of ☆☆☆☆☆. I'm mostly self-taught except for Excel, Python, and Java which I learnt in some of my classes. </p>
+                </div>
+
+                <div class = "subSectionContainer">
                     <div class = "subSectionName">
                         <h3>Software</h3>
                     </div>
                     <div class = "subSectionContent">
-                        <p>Microsoft Excel, Unity, Microsoft Power Bi</p>
+                        <div class = "subSectionContentSplit">
+                            <ul>
+                                <li>Unity ☆☆☆</li>
+                                <li>Microsoft Excel ☆☆</li>
+                            </ul>
+                        </div>
+                        <div class = "subSectionContentSplit">
+                            <ul>
+                                <li>Django ☆</li>
+                                <li>Microsoft Power Bi ☆</li>
+                            </ul>
+                        </div>
+                    
                     </div>
+
                 </div>
 
                 <div class = "subSectionContainer">
@@ -190,7 +213,21 @@
                         <h3>Languages</h3>
                     </div>
                     <div class = "subSectionContent">
-                        <p>Python, C#, Java, HTML, CSS, SQL</p>
+                        <div class = "subSectionContentSplit">
+                            <ul>
+                                <li>Python ☆☆☆</li>
+                                <li>C# ☆☆☆</li>
+                                <li>Java ☆☆</li>
+                                <li>HTML ☆☆</li>
+                            </ul>
+                        </div>
+                        <div class = "subSectionContentSplit">
+                            <ul>
+                                <li>CSS ☆☆</li>
+                                <li>JavaScript ☆</li>
+                                <li>SQL ☆</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -204,33 +241,33 @@
 
                 <div class="subSectionContainer">
                     <div class = "subSectionName">
-                        <h3>Ingenium</h3>
+                        <h3>Ingenium (2023)</h3>
                     </div>
                     <div class = "subSectionContent">
-                        <p>A game I made in Unity! My largest project to date. Check it out at: <a href="https://frenchcoke.itch.io/ingenium" style="color: white;" target="_blank">Itch.io</a></p>
+                        <p>A 2D simulation management game I made with the Unity engine. My largest and most complicated project so far. Coded in Unity's operating language of C#. Check it out for free at: <a href="https://frenchcoke.itch.io/ingenium" style="color: white;" target="_blank">Itch.io</a></p>
                         
                     </div>
                 </div>
 
                 <div class="subSectionContainer">
                     <div class = "subSectionName">
-                        <h3>Discord Data Analyzer</h3>
+                        <h3>Discord Data Analyzer (2023)</h3>
                     </div>
                     <div class = "subSectionContent">
-                        <p>A Windows application which reads Discord data files into graphs and extracts cool facts. Originally written in Python and was converted to an exe by PyInstaller. Try it at: <a href="https://drive.google.com/file/d/1TtQ8BEpp8IsQJOvBeqBvtqWI2bWZlDoV/view?usp=drive_link" style="color: white;" target="_blank">Google Drive</a></p>
+                        <p>A Windows application which reads Discord data files into graphs, a csv file, and displays some interesting facts. Written in Python and converted to an exe by PyInstaller. Try it at: <a href="https://drive.google.com/file/d/1TtQ8BEpp8IsQJOvBeqBvtqWI2bWZlDoV/view?usp=drive_link" style="color: white;" target="_blank">Google Drive</a></p>
                     </div>
 
                     <img src = "discordAnalyzerResults.png" alt="Sample discord analyzer results" style="max-width: 75%; height: auto;" class="center">
-                    <figcaption style="text-align: center;">Example output (Some content blurred)</figcaption>
+                    <figcaption style="text-align: center;">Example of the generated graphs png (some content excluded)</figcaption>
 
                 </div>
 
                 <div class="subSectionContainer">
                     <div class = "subSectionName">
-                        <h3>Personal Website</h3>
+                        <h3>Resume Website (2023)</h3>
                     </div>
                     <div class = "subSectionContent">
-                        <p>Designed a personal website for myself. This website!</p>
+                        <p>Designed a simple resume website for myself. This website! It was coded from scratch with HTML, CSS, and a little JavaScript.</p>
                         
                     </div>
                 </div>
@@ -240,9 +277,11 @@
                         <h3>MonsterSim (2022)</h3>
                     </div>
                     <div class = "subSectionContent">
-                        <p>A text-based game coded without an engine in Java. </p>
+                        <p>A text-based RPG roguelite game coded in Java. Made for a school project so not very refined, but a decent concept which I would like to remake one day. Try it at: <a href="https://drive.google.com/file/d/16ZN8aWox_lLSKVUjjlfhXDfm1DLrQGsP/view?usp=drive_link" style="color: white;" target="_blank">Google Drive</a></p>
                     </div>
                 </div>
+
+                <p style="float: right;">Note: The online name I use is frenchcoke so some of these project links will be uploaded by a frenchcoke, which is still me.</p>
                 
             </div>
             
@@ -251,6 +290,7 @@
             <h2 id="contact">Contact</h2>
             <p>Email: <a href="mailto:seankmah@gmail.com" style="color:white">seankmah@gmail.com</a></p>
             <p>Linkedin: <a href="https://www.linkedin.com/in/sean-mah-1498b5264/" style="color: white" target="_blank">sean-mah-1498b5264</a></p>
+            <p>Github: <a href="https://github.com/frenchcokes" style="color: white" target="_blank">frenchcokes</a></p>
 
             <hr>
 
@@ -277,7 +317,7 @@
     
                 if (targetSection) {
                     targetSection.scrollIntoView({
-                        behavior: 'smooth' // This triggers the smooth scroll effect
+                        behavior: 'smooth'
                     });
                 }
             }
