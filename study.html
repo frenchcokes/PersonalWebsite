@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learn Menu</title>
+
+        <link rel = "stylesheet" href="websiteStyle.css">
+    </head>
+
+    <body>
+        <div class="background-rectangle">
+            <div class = "content" id = "top">
+
+                <div class="textContainer">
+                    <h2>Study Links</h2>
+                </div>
+
+                <hr>
+                
+                <div class="button-container">
+                    <button data-target="top" style="width: 120px;">Back to top</button>
+                </div>
+
+                <hr>
+
+                <footer>Website and Design by me: Sean Mah</footer>
+            
+                <hr>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var scrollButtons = document.querySelectorAll("button");
+        
+                function scrollToTarget(event) {
+                    var targetId = event.target.getAttribute('data-target');
+                    var targetSection = document.getElementById(targetId);
+        
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+        
+                scrollButtons.forEach(function (button) {
+                    button.addEventListener('click', scrollToTarget);
+                });
+            });
+        </script>
+    </body>
+</html>
