@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Study Menu</title>
+        <title>{{ page.title }}</title>
 
         <link rel = "stylesheet" href="websiteStyle.css">
     </head>
@@ -12,19 +12,11 @@
         <div class="background-rectangle">
             <div class = "content" id = "top">
 
-                <div class="textContainer">
-                    <h2>Study Links</h2>
-                </div>
+                <h2>{{ page.title }}</h2>                
                 
                 <hr>
-                
-                {% link study.Math201}
 
-                <hr>
-                
-                <div class="button-container">
-                    <button data-target="top" style="width: 120px;">Back to top</button>
-                </div>
+                <p>{{ content }}</p>
 
                 <hr>
 
