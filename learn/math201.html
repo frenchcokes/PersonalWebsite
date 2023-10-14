@@ -21,6 +21,10 @@
 
                 <hr>
 
+                Welcome to my Math 201 summary! This webpage won't be very helpful if you have no idea whatsoever of what's going on, but it's a good overview.
+
+                <hr>
+
                 <h2>Separable Equations</h2>
                 <p>Separable Differential Equation
                     \[ {dy \over dx} = f(y)g(x) \rightarrow { {dy \over f(y)}} = g(x)dx \rightarrow {\int {{dy \over f(y)} = \int g(x)dx}}\]
@@ -67,15 +71,15 @@
                     &nbsp Solve for \(r_1, r_2\):
                     <br>
                     &nbsp &nbsp if \(r_1 \ne r_2\):
-                    \[ y_c(t) = c_1e^{r_1t} + c_2e^{r_2t} \]
+                    \[ y_h(t) = c_1e^{r_1t} + c_2e^{r_2t} \]
                     &nbsp &nbsp if \(r_1 = r_2\):
-                    \[ y_c(t) = c_1e^{r_1t} + c_2te^{r_2t} \]
+                    \[ y_h(t) = c_1e^{r_1t} + c_2te^{r_2t} \]
                     &nbsp &nbsp if \(r_1,r_2 = \alpha \pm i\beta \):
-                    \[ y_c(t) = c_1e^{\alpha t}cos(\beta t) + c_2e^{\alpha t}sin(\beta t) \]
+                    \[ y_h(t) = c_1e^{\alpha t}cos(\beta t) + c_2e^{\alpha t}sin(\beta t) \]
 
                     Non-Homogenous
                     \[ ay^{\prime \prime} + by^{\prime} + cy = f(t) \]
-                    \[ y(t) = y_c(t) + y_p(t) \]
+                    \[ y(t) = y_h(t) + y_p(t) \]
                     &nbsp Method 1: Undetermined Coefficents
                     <br> 
                     Make a guess based on \(f(t)\) and solve for \(y_p(t)\) coefficents by substituting the guess into the equation. Guesses based on this chart: <a href = "https://raw.githubusercontent.com/angeloyeo/angeloyeo.github.io/master/pics/2021-06-04-undetermined_coefficients/pic1.png" target = "_blank">Link</a>
@@ -115,6 +119,57 @@
                     \[ y_n(t) = x^{\alpha}(cos(\beta ln(x)) + isin(\beta ln(x))) \]
                 </p>
 
+                <hr>
+
+                <h2>Free Vibrations</h2>
+                <p>
+                    \( m \) = mass, \( b \) = damping constant, \( k \) = spring constant
+                    \[my^{\prime \prime} +by^{\prime} + ky = 0 \]
+                    &nbsp if \( b^2 > 4mk \) (overdamped):
+                    \[ y(t) = c_1e^{r_1t} + c_2e^{r_2t} \]
+                    &nbsp if \( b^2 = 4mk\) (critically damped):
+                    \[ y(t) = c_1e^{ {-b \over 2m} t} + c_2te^{ {-b \over 2m} t} \]
+                    &nbsp if \( b^2 < 4mk \) (underdamped):
+                    \[ y_h(t) = c_1e^{ {-b \over 2m} t}cos( {\sqrt{4mk-b^2} \over 2m}t) + c_2e^{ {-b \over 2m} t}sin( {\sqrt{4mk-b^2} \over 2m}t) \]
+                    &nbsp &nbsp \(A\) = amplitude, \(\phi\) = phase shift
+                    \[ c_1 = Asin(\phi), c_2 =Acos(\phi), A = \sqrt{c_1^2 + c_2^2} \]
+                    &nbsp &nbsp \( w ={ \sqrt{4mk-b^2} \over 2m } = \) angular frequency, \( T = {{2 \pi} \over w} =\) period, \( {w \over {2 \pi}} = \) frequency
+                    \[ y_h(t) = Asin(wt + \phi)e^{ {-b \over 2m} t} \]
+                </p>
+
+                <hr>
+
+                <h2>Forced Vibrations</h2>
+                <p>
+                    \( m \) = mass, \( b \) = damping constant, \( k \) = spring constant
+                    \[my^{\prime \prime} +by^{\prime} + ky = F_0cos( \gamma t) \]
+                </p>
+
+                <hr>
+
+                <h2>Laplace Transformations</h2>
+                <p>
+                    \[ L\{f(t)\}(s) = F(s) = \int_0^{ \infty }{e^{-st}f(t)dt} \]
+
+                    &nbsp When does a Laplace Transformation exist?
+                    <br>
+                    &nbsp &nbsp 1. If \( f(t) \) is piecewise continuous on \( [0,\infty] \)
+                    <br>
+                    &nbsp &nbsp 2. If exists \( M \) and \( t \) such that: \( |f(t)| \le Me^{\alpha t} \) when \( t \ge 0 \)
+                    <br>
+
+                    &nbsp Properties of Laplace Transformations
+                    <br>
+                    &nbsp &nbsp (i) \( L\{ e^{at}f(t) \}(s) = F(s-a), s > a \)
+                    <br>
+                    &nbsp &nbsp (ii) \( L\{ f^{m}(t) \}(s) = s^{m}F(s)-s^{m-1}f(0)-...f^{m-1}(0) \)
+                    <br>
+                    &nbsp &nbsp &nbsp &nbsp \( L\{ f^{\prime}(t) \}(s) = sF(s)-f(0) \)
+                    <br>
+                    &nbsp &nbsp &nbsp &nbsp \( L\{ f^{\prime \prime}(t) \}(s) = s^2F(s)-sf(0)-f^{\prime}(0) \)
+                    <br>
+                    &nbsp &nbsp (iii) \( L\{ t^nf(t) \}(s) = (-1)^n {d^n \over ds^n}F(s) \)
+                </p>
 
                 <hr>
                 
