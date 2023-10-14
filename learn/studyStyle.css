@@ -117,38 +117,3 @@ a {
         display: none;
     }
 }
-
-.textContainer {
-    width: 780px;
-    display: table;
-}
-
-.mainSection {
-    float: left;
-    width: 20%;
-}
-
-.subSectionContainer {
-    float: right;
-    width: 80%;
-    display: table;
-}
-
-.subSectionName {
-    float: left;
-    width: 30%;
-}
-
-.subSectionContent {
-    float: left;
-    width: 70%;
-    font-size: 14px;
-
-    display: flex;
-    align-items: center;
-}
-
-.subSectionContentSplit {
-    float: left; 
-    width: 50%
-}
