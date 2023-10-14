@@ -1,8 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
-        <h>I am math 201</h>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel = "stylesheet" href = "websiteStyle.css">
     </head>
     <body>
-        <p>math math math</p>
+        <div class = "background-rectangle">
+            <div class = "content" id = "top">
+                
+                <div class = "titleHolder">
+                    <h1>Math 201</h1>
+                </div>
+
+                <h2>Separable Equations</h2>
+                <p>Equations </p>
+
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var scrollButtons = document.querySelectorAll("button");
+        
+                function scrollToTarget(event) {
+                    var targetId = event.target.getAttribute('data-target');
+                    var targetSection = document.getElementById(targetId);
+        
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+        
+                scrollButtons.forEach(function (button) {
+                    button.addEventListener('click', scrollToTarget);
+                });
+            });
+        </script>
+
     </body>
-<html>
+</html>
