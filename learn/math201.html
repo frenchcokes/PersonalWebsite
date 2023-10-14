@@ -22,14 +22,99 @@
                 <hr>
 
                 <h2>Separable Equations</h2>
-                <p>Equations 
+                <p>Separable Differential Equation
+                    \[ {dy \over dx} = f(y)g(x) \rightarrow { {dy \over f(y)}} = g(x)dx \rightarrow {\int {{dy \over f(y)} = \int g(x)dx}}\]
 
-                    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-                    \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]
+                    Homogenous First Order Simplifications
+                    \[ {dy \over dx} = {f({y \over x})} \rightarrow u = {y \over x} \rightarrow {dy \over dx} = u + x{du \over dx} \rightarrow u + x{du \over dx} = f(u) \]
+
+                    \[ {dy \over dx} = {f({ax+by})} \rightarrow u = {ax+by} \rightarrow {du \over dx} = a + b{dy \over dx} \rightarrow {a \over b}{du \over dx} = f(u) + {a \over b} \]
+
                 </p>
-                    
-
                 
+                <hr>
+
+                <h2>Linear Equations</h2>
+                <p>Standard Form
+                    \[ {dy \over dx} + p(x)y = q(x) \rightarrow  u(x) = e^{\int p(x)dx} \rightarrow y(x) = {1 \over u(x)}({\int{u(x)q(x)ds + c}}) \]
+
+                    Bernoulli's Equation
+                    \[ {dy \over dx} + p(x)y = q(x)y^n \rightarrow y^{-2}{dy \over dx} + p(x)y^{1-n} = q(x)\]
+                    
+                    Linear Coefficent Equations
+                    \[ (a_1x+b_1y+c_1)dx + (a_2x+b_2y+c_2)dy = 0 \rightarrow x=u+k, y=v+1\]
+                    \[ (a_1u+b_1v+c_1+a_1k+b_1l)du + (a_2u+b_2v+c_2+a_2k+b_2l)dv = 0 \]
+                    \[ (a_1u+b_1v)du + (a_2u+b_2v)dv = 0 \]
+                </p>
+
+                <hr>
+
+                <h2>Exact Equations</h2>
+                <p>
+                    \[ M(x,y)dx + N(x,y)dy = 0 \]
+                    Exact if:
+                    \[ {\partial M \over \partial y} = {\partial N \over \partial x} \]
+                    &nbsp If exact: 
+                    \[ F(x,y) = {\int M(x,y)dx} + g(y) \rightarrow {\partial F \over \partial y} = {\partial \over {\partial y} }({\int M(x,y)dx}) + g^{\prime} (y) = N(x,y) \]
+                    \[ g^{\prime} (y) = a \rightarrow g(y) = b + c \rightarrow F(x,y) = \int{M(x,y)dx + g(y)} \]
+                </p>
+
+                <h2>Second Order Linear Equations</h2>
+                <p>
+                    Homogenous
+                    \[ ay^{\prime \prime} + by^{\prime} + cy = 0 \] 
+                    \[ar^2+br+c = 0 \]
+                    &nbsp Solve for \(r_1, r_2\):
+                    <br>
+                    &nbsp &nbsp if \(r_1 \ne r_2\):
+                    \[ y_c(t) = c_1e^{r_1t} + c_2e^{r_2t} \]
+                    &nbsp &nbsp if \(r_1 = r_2\):
+                    \[ y_c(t) = c_1e^{r_1t} + c_2te^{r_2t} \]
+                    &nbsp &nbsp if \(r_1,r_2 = \alpha \pm i\beta \):
+                    \[ y_c(t) = c_1e^{\alpha t}cos(\beta t) + c_2e^{\alpha t}sin(\beta t) \]
+
+                    Non-Homogenous
+                    \[ ay^{\prime \prime} + by^{\prime} + cy = f(t) \]
+                    \[ y(t) = y_c(t) + y_p(t) \]
+                    &nbsp Method 1: Undetermined Coefficents
+                    <br> 
+                    Make a guess based on \(f(t)\) and solve for \(y_p(t)\) coefficents by substituting the guess into the equation. Guesses based on this chart: <a href = "https://raw.githubusercontent.com/angeloyeo/angeloyeo.github.io/master/pics/2021-06-04-undetermined_coefficients/pic1.png" target = "_blank">Link</a>
+                    <br>
+
+                    &nbsp Method 2: Variation of Parameters
+                    <br>
+                    Use the \(y_1\) and \(y_2\) values found from the homogenous solution to find \(y_p(t)\).
+                    \[ y_p(t) = v_1y_1 + v_2y_2\]
+                    \[ v_1(t) = -\int{{f(t)y_2(t)}\over{a(y_1(t)y_2^{\prime}(t)-y_1^{\prime}(t)y_2(t))}}dt, v_2(t) = \int{{f(t)y_1(t)}\over{a(y_1(t)y_2^{\prime}(t)-y_1^{\prime}(t)y_2(t))}}dt \]
+                    <br>
+
+                    &nbsp Method 3: Reduction of Order
+                    Use \(y_1\) or \(y_2\) to find a guess with a function \(u\) and substitute the functions into the equation. This reduces the order to a more solveable form.
+                    \[ y_p(t) = uy_1 \]
+                    It's gotta be differentiated twice for \(y^{\prime}(t)\) and \(y^{\prime \prime}(t) \).
+                </p>
+
+                <hr>
+
+                <h2>Cauchy-Euler</h2>
+                <p>
+                    \[ ax^2{d^2y \over dx^2} + bx {dy \over dx} + cy = f(x) \rightarrow a{d^2y \over dx^2} + (b-a){dy \over dx} + c = f(e^x) \]
+                    
+                    &nbsp If in the form: 
+
+                    \[ ax^2{d^2y \over dx^2} + bx {dy \over dx} + cy = 0 \rightarrow ar(r-1)+br+c=0 \]
+                    <br>
+
+                    &nbsp Solve for \(r_1, r_2\):
+                    <br>
+                    &nbsp &nbsp if \(r_1 \ne r_2\):
+                    \[ y_n(t) = c_1x^{r_1} + c_2x^{r_2} \]
+                    &nbsp &nbsp if \(r_1 = r_2\):
+                    \[ y_n(t) = c_1x^{r} + c_2x^{r}ln(x) \]
+                    &nbsp &nbsp if \(r_1,r_2 = \alpha \pm i\beta \):
+                    \[ y_n(t) = x^{\alpha}(cos(\beta ln(x)) + isin(\beta ln(x))) \]
+                </p>
+
 
                 <hr>
                 
