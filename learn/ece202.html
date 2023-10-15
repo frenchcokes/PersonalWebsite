@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel = "stylesheet" href = "studyStyle.css">
+
+        <script type=”text/javascript” src=”http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div class = "background-rectangle">
+            <div class = "content" id = "top">
+                
+                <h4>Ece 202</h4>
+
+                <hr>
+
+                <h2>Electric Fundamentals</h2>
+                <p>
+                    &nbsp \( V = \) Voltage (V), \( I = \) Current (A), \( R = \) Resistance \( (Ω) \), \( P = \) Power (W), \( W = \) Work (J)
+                    \[ V = IR \]
+                    \[ P = IV \]
+                    \[ W = \int_0^{t_f} Pdt \]
+                    &nbsp \( e_r = \) relative permittivity, \( e = \) permittivity of material, \( e_0 = \) permittivity of vaccum \( = 8.85 * 10^{-12} {F \over m} \)
+                    \[ e_r = {e \over e_0} \] 
+                    &nbsp Power depends on direction of current and voltage: 
+                    <br>
+                    &nbsp &nbsp Current leaves from (+) terminal: \( P > 0  \) power is absorbed
+                    <br>
+                    &nbsp &nbsp Current leaves from (-) terminal: \( P < 0  \) power is supplied
+                </p>
+                
+                <hr>
+
+                <h2>Circuit Fundamentals</h2>
+                <p>
+                    Direct current(DC): Constant current
+                    <br>
+                    Alternating current(AC): Oscillating current ie. varies with time
+                    <br>
+                    Node: Region between circuit elements
+                    <br>
+                    <br>
+                    Google a chart to look at the different symbols.
+                    
+                </p>
+
+                <hr>
+
+                <h2>Ohm's Law</h2>
+                <p>
+                    \[ V = IR\]
+                    Positive Sign Convention (PSC) - Current travels from high to low \( (+) \rightarrow (-) \)
+                    <br>
+                    &nbsp Resistors = Current leaves from (-) terminal
+                    <br>
+                    &nbsp Sources = Current leaves from (+) terminal
+                    <br>
+                    When sign convention not obeyed, 
+                    \[ P=-IV \]
+                </p>
+
+                <hr>
+
+                <h2>Kirchoff's Laws</h2>
+                <p>
+                    Kirchoff's Current Law (KCL): 
+                    <br>
+                    &nbsp At a node:
+                    \[ \sum I_{enter} = \sum I_{exit} \]
+                    <br>
+
+                    Kirchoff's Voltage Law (KVL): 
+                    <br>
+                    &nbsp At a loop (Closed wire path that loops back to beginning): 
+                    \[ \sum V_{supplied} = \sum V_{absorbed} \]
+
+                    Power Balance: 
+                    <br>
+                    \[ \sum P_{supplied} = \sum P_{absorbed} \]
+                </p>
+
+                <hr>
+
+                <h2>Series and Parallel Resistors</h2>
+                <p>
+                    Series Resistors
+                    <br>
+                    Something is in series when there is a direct path between them with no other branches or elements.
+                    <br>
+                    &nbsp Resistors in series can be simplified into one:
+                    \[ R_{eq} = R_1 + R_2 + ... + R_n \]
+                    &nbsp The voltage of \( V_n \) can be found with the voltage division rule (VDR): 
+                    \[ V_n = V * { R_n \over R_{eq}} \]
+                    &nbsp Voltage sources and resistors in series can be converted to one voltage source:
+                    \[ I = { V_{eq} \over {R_1 + R_2 + ... + R_n}} = {V_{eq} \over R_{eq} } \]
+                
+                    Parallel Resistors
+                    <br>
+                    Resistors are parallel when branches for both resistors lead to the same node on both sides.
+                    <br>
+                    &nbsp They can be simplified into one resistor with: 
+                    \[ {1 \over R_{eq}} = {1 \over R_{1} } + {1 \over R_{2}} + .... + {1 \over R_n} \]
+                    &nbsp The current of \( I_n \) can be found with the current division rule (CDR):
+                    \[ I_n = {{I * R_{eq}} \over R_n} \]
+                    &nbsp Current Sources and resistors in parallel can be converted into one current source:
+                    \[ I_{eq} = \sum{ I_{R1} + I_{R2} +...+ I_{Rn} } \]
+                    <br>
+                </p>
+
+                <hr>
+
+                <h3>Delta-Wye Transformations</h3>
+                <p>
+                    You can convert circuits to equivalent forms which makes them easier to solve.
+                    <br>
+                    &nbsp Delta to Wye:
+                    \[ R_1 ={ { R_b * R_c} \over {R_a + R_b + R_c} }, R_2 ={ { R_a * R_c} \over {R_a + R_b + R_c} }, R_3 ={ { R_a * R_b} \over {R_a + R_b + R_c} } \]
+                    
+                    &nbsp Wye to Delta: 
+                    \[ R_a = { {R_1R_2 + R_2R_3 + R_3R_1} \over {R_1} }, R_b = { {R_1R_2 + R_2R_3 + R_3R_1} \over {R_2} }, R_c = { {R_1R_2 + R_2R_3 + R_3R_1} \over {R_3} } \]
+                    
+                    <div style="align-items: center; justify-content: center; display: flex;">
+                        <img src = "deltawye.jpg" alt = "deltawye layout" style="width: 50%; height: 50%; ">
+                    </div>
+                
+                </p>
+
+                <hr>
+
+                <h3>Node Voltage Analysis</h3>
+                <p>
+                    Need # of nodes - 1 equations to solve. 
+                    <br>
+                    At each node that's not the ground node you chose:
+                    <br>
+                    &nbsp 1. Write KCL (ie summation of currents at a node)
+                    <br>
+                    &nbsp 2. Write the currents in terms of V and R with the equation: 
+                    <br>
+                    &nbsp &nbsp Where: \( V_1  = \) voltage current is leaving from, \( V_2  = \) voltage current is entering
+                    \[ I = {{V_1 - V_2} \over R} \]
+                    &nbsp &nbsp \( V_n \) represents the voltage at the assigned node, and the voltage at the ground node is 0. If there is no current already, choose a direction.
+                    <br>
+                    &nbsp 3. Solve with matrix
+                    <br>
+                    Special cases: Current sources don't need to be written in terms of V and R.
+                </p>
+
+                <hr>
+
+                <h3>Mesh Current Analysis</h3>
+                <p>
+                    Mesh: A loop with no smaller loops inside
+                    <br>
+                    Can only be applied to planar nodes (cannot be drawn without wires crossing over).
+                    <br>
+                    &nbsp 1. Write and label meshes wherever you can on the circuit
+                    <br>
+                    &nbsp 2. For each mesh, write a KVL. Shared resistors voltage should be written as: 
+                    \[ V_X = R_x(I_{current mesh} - I_{other mesh}) \] 
+                    &nbsp 3. Solve with matrix
+                    <br>
+
+                    Current Sources:
+                    <br>
+                    &nbsp Edge current sources: They directly give a current value, meaning one less equation to solve.
+                </p>
+                
+                <h3>Supermeshes and Supernodes</h3>
+                <p>
+                    A supermesh contains two meshes with a shared current source. It can be obtained by using the same process to get a mesh but around both meshes and ignoring the shared element. A KCL between meshes the supermesh is needed to solve.
+                    <br>
+                    <br>
+                    Supernodes are used to perform NVA when there are multiple voltage sources. We define it around the voltage source as long as it is not attached to the ground node. To solve, find an equation relating the supernode to the rest of the circuit.
+                </p>
+
+                <hr>
+                
+                <footer>Website and Design by me: Sean Mah</footer>
+                    
+                <hr>
+
+            </div>
+        </div>
+    </body>
+</html>
