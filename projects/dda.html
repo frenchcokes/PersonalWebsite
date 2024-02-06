@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel = "stylesheet" href = "projectsStyle.css">
+
+        <script type=”text/javascript” src=”http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    </head>
+    <body>
+        <div class = "background-rectangle">
+            <div class = "content" id = "top">
+                
+                <h4 style="font-size: 50px;">Discord Data Analyzer</h4>
+                
+                <hr>
+
+                <h2>Overview</h2>
+                <p>
+
+                </p>
+                <h2>Pictures</h2>
+                <p>
+                    
+                </p>
+                
+                <footer>Website and Design by me: Sean Mah</footer>
+                    
+                <hr>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var scrollButtons = document.querySelectorAll("button");
+        
+                function scrollToTarget(event) {
+                    var targetId = event.target.getAttribute('data-target');
+                    var targetSection = document.getElementById(targetId);
+        
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+        
+                scrollButtons.forEach(function (button) {
+                    button.addEventListener('click', scrollToTarget);
+                });
+            });
+        </script>
+
+    </body>
+</html>
